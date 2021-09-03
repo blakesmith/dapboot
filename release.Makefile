@@ -101,3 +101,9 @@ dapboot-maplemini-high-128.bin: | $(BUILD_DIR)
 	$(Q)$(MAKE) TARGET=MAPLEMINI_HIGH_128 -C src/ clean
 	$(Q)$(MAKE) TARGET=MAPLEMINI_HIGH_128 -C src/
 	$(Q)cp src/dapboot.bin $(BUILD_DIR)/$(@)
+
+dapboot-keebee2.bin: | $(BUILD_DIR)
+	@printf "  BUILD $(@)\n"
+	$(Q)$(MAKE) TARGET=KEEBEE2 -C src/ clean
+	$(Q)$(MAKE) TARGET=KEEBEE2 -C src/
+	$(Q)cp src/dapboot.bin $(BUILD_DIR)/$(@)
